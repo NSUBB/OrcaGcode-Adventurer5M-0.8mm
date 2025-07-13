@@ -1,0 +1,22 @@
+; Flashforge Adventurer 5M custom start Gcode for 0.8mm nozzle by DesignWeaver
+
+; INITIAL SETTINGS
+M140 S[bed_temperature_initial_layer_single] ; Start heating bed (no wait)
+M104 S[nozzle_temperature_initial_layer] ; Start heating nozzle (no wait) 
+;Adventurer 5M firmware will forrce wait for both bed & nozzle temperatures regardless.
+G90 ; Use absolute positioning
+M83 ; Use relative extrusion mode
+
+; NOZZLE PURGE
+G1 X105 Y-105 Z15 F6000 ; Move to front-right corner
+G1 E80 F400 ; Poop in the corner
+G1 E-0.5 F400 ; Retract
+G1 X55 Y-105 Z0.1 F4800 ; Move toward prime line and knock off ooze.
+
+; PURGE LINE
+G1 X50 Y-105 Z0.3 F4800 ; Move to prime line start position.
+G1 E5 F1200 ; Prime nozzle
+G1 X-50 Y-105 E13 F4800 ; Purge line
+G1 X0 Y-105 E7 F2400 ; Move atop purge line to wipe/prime for print
+
+G92 E0 ; Reset extruder position
