@@ -15,6 +15,8 @@ The code is saved with a `.001` extension to enable syntax highlighting in **VS 
 
 ---
 
+<img width="1163" height="603" alt="image" src="https://github.com/user-attachments/assets/96a1f106-7970-4329-a39f-0a65bf2572f0" />
+
 ## 🔧 Installation Steps
 
 1. **Select the proper printer profile** in Orca Slicer:
@@ -26,10 +28,11 @@ The code is saved with a `.001` extension to enable syntax highlighting in **VS 
    - In the pop-up window, switch to the **Machine G-code** tab.
 
 3. **Replace the Start G-code:**
+   -  Click the ✏️ **Edit icon** above the code window from the "Machine start G-code" section.
    - Delete all existing text from the "Machine start G-code" field.
    - Paste the contents of `OrcaGcode-Adventurer5M-0.8mm.001`.
 
-4. **Save the profile:**
+5. **Save the profile:**
    - Click the 💾 **Disk icon** at the top to save your modified printer preset.
    - Note: You must save under a new name — default profiles cannot be overwritten.
 
